@@ -39,7 +39,7 @@ a {
 .main-content {
     position: relative;
     width: 1300px;
-    max-width: calc(100% - 48px);
+    max-width: calc(100% - 40px);
     margin: 0 auto;
     padding-bottom: 80px;
 }
@@ -86,6 +86,7 @@ a {
     background-color: transparent;
     text-align: center;
     padding: 8px;
+    transition: 0.3s;
 }
 
 .btn.disabled {
@@ -220,15 +221,23 @@ a {
 }
 
 .header .location {
+    padding: 12px 0;
     position: relative;
     cursor: pointer;
+}
+
+.header .location .content {
+    user-select: none;
     display: flex;
     align-items: center;
 }
 
+.header .location .content:hover {
+    opacity: 0.5;
+}
+
 .header .location .toggle-list {
     width: 197px;
-    top: 175%;
 }
 
 .header .location .name {
@@ -256,9 +265,15 @@ a {
 }
 
 .header .phone {
+    color: #303030;
+    padding: 12px 0;
     display: flex;
     align-items: center;
     column-gap: 10px;
+}
+
+.header .phone:hover {
+    opacity: 0.5;
 }
 
 .header .mid {
@@ -294,6 +309,11 @@ a {
     cursor: pointer;
 }
 
+.header .auth .login:hover,
+.header .auth .register:hover {
+    opacity: 0.5;
+}
+
 .header .auth span {
     height: 10px;
     display: inline-block;
@@ -308,11 +328,21 @@ a {
 }
 
 .header .action {
+    width: 32px;
+    background-color: transparent;
     cursor: pointer;
-    padding: 0 8px;
+    padding: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.header .action:hover {
+    background-color: #f8f8f8;
+}
+
+.header .action:active {
+    background-color: #e8e7e7;
 }
 
 .header .action.heart {
@@ -322,11 +352,11 @@ a {
 
 .header .action.heart span {
     position: absolute;
-    top: -10px;
-    right: -5px;
+    top: -2px;
+    right: -4px;
     font-weight: 700;
     text-align: center;
-    padding-top: 6px;
+    padding-top: 5px;
     font-size: 1rem;
     line-height: 1;
     color: #ffffff;
@@ -359,7 +389,14 @@ a {
     font-size: 1.3rem;
     line-height: 1;
     text-transform: uppercase;
+}
+
+.header .category a {
     color: #303030;
+}
+
+.header .category:hover {
+    opacity: 0.5;
 }
 
 .header .category.disabled {
@@ -485,6 +522,14 @@ a {
     background-color: #f8f8f8;
     display: flex;
     flex-direction: column;
+}
+
+.popular .card img {
+    transition: transform 0.3s;
+}
+
+.popular .card:hover img {
+    transform: scale(1.2);
 }
 
 .popular .image-block {
@@ -1028,17 +1073,53 @@ a {
     font-weight: 600;
     font-size: 1.2rem;
     line-height: 1;
-    text-transform: uppercase;
     color: #303030;
 }
 
 .product .size .subtitle img {
     cursor: pointer;
-    margin-left: 8px;
+    padding: 0 8px;
 }
 
 .product .size .subtitle img:hover {
     filter: brightness(0.75);
+}
+
+.product .size .info {
+    position: relative;
+}
+
+.product .size .info:hover div {
+    display: block;
+}
+
+.product .size .info div {
+    display: none;
+    padding: 24px;
+    width: 271px;
+    height: 148px;
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: #303030;
+}
+
+.product .size .info div::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(45deg);
 }
 
 .product .size-list {
@@ -1139,6 +1220,10 @@ a {
     display: inline;
 }
 
+.product .action-item.heart:active img {
+    filter: none;
+}
+
 .product .action-item.heart:active img:nth-child(1) {
     display: none;
 }
@@ -1150,7 +1235,12 @@ a {
     color: #303030;
 }
 
-.product .action-item:not(:active) img {
+.product .action-item .icon {
+    width: 20px;
+    text-align: center;
+}
+
+.product .action-item:hover img {
     filter: brightness(0.75);
 }
 
@@ -1181,6 +1271,10 @@ a {
     color: #303030;
 }
 
+.articles .articles-cta:hover {
+    opacity: 0.5;
+}
+
 .articles .articles-cta img {
     width: 26px;
     margin-left: 12px;
@@ -1203,5 +1297,9 @@ a {
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.5;
+    color: #303030;
+}
+
+.articles .card .title a {
     color: #303030;
 }

@@ -22,8 +22,10 @@
                 <div class="head">
                     <div class="left">
                         <div class="location toggle-menu">
-                            <img src="./assets/images/icons/location.svg" alt="" />
-                            <p class="name">Санкт-Петербург</p>
+                            <div class="content">
+                                <img src="./assets/images/icons/location.svg" alt="" />
+                                <p class="name">Санкт-Петербург</p>
+                            </div>
                             <ul class="toggle-list">
                                 <li class="item active">Санкт-Петербург</li>
                                 <li class="item">Москва</li>
@@ -31,10 +33,10 @@
                                 <li class="item">Ростов-на-Дону</li>
                             </ul>
                         </div>
-                        <div class="phone">
+                        <a href="tel:88007852535" class="phone">
                             <img src="./assets/images/icons/phone.svg" alt="" />
                             <p>8 800 785-25-35</p>
-                        </div>
+                        </a>
                     </div>
                     <div class="mid">
                         <img src="./assets/images/icons/logo.svg" class="logo" alt="" />
@@ -47,28 +49,40 @@
                             <a href="#1" class="register">Регистрация</a>
                         </div>
                         <div class="actions">
-                            <div class="action heart">
+                            <button class="action heart">
                                 <img src="./assets/images/icons/heart.svg" alt="" />
                                 <span>23</span>
-                            </div>
-                            <div class="action">
+                            </button>
+                            <button class="action">
                                 <img src="./assets/images/icons/chart.svg" alt="" />
-                            </div>
-                            <div class="action">
+                            </button>
+                            <button class="action">
                                 <img src="./assets/images/icons/bag.svg" alt="" />
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="foot">
                     <div class="categories">
-                        <p class="category disabled">Каталог</p>
-                        <p class="category">Акции</p>
-                        <p class="category">Бренды</p>
-                        <p class="category">Магазины</p>
-                        <p class="category">О нас</p>
-                        <p class="category">Доставка и оплата</p>
-                        <p class="category">Статьи</p>
+                        <p class="category disabled"><a href="#1">Каталог</a></p>
+                        <p class="category">
+                            <a href="#1">Акции</a>
+                        </p>
+                        <p class="category">
+                            <a href="#1">Бренды</a>
+                        </p>
+                        <p class="category">
+                            <a href="#1">Магазины</a>
+                        </p>
+                        <p class="category">
+                            <a href="#1">О нас</a>
+                        </p>
+                        <p class="category">
+                            <a href="#1">Доставка и оплата</a>
+                        </p>
+                        <p class="category">
+                            <a href="#1">Статьи</a>
+                        </p>
                     </div>
                     <div class="search">
                         <img src="./assets/images/icons/search.svg" alt="" />
@@ -745,10 +759,20 @@
                             </div>
                         </div>
                         <div class="size">
-                            <p class="subtitle">
-                                Размер
-                                <img src="./assets/images/icons/question.svg" alt="" />
-                            </p>
+                            <div class="subtitle">
+                                <p>РАЗМЕР</p>
+                                <div class="info">
+                                    <div>
+                                        Также как существующая теория напрямую зависит
+                                        от экономической целесообразности принимаемых
+                                        решений.
+                                    </div>
+                                    <img
+                                        src="./assets/images/icons/question.svg"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
                             <div class="size-list">
                                 <div class="size-item active">16.5</div>
                                 <div class="size-item">17.5</div>
@@ -771,28 +795,34 @@
                             </div>
                             <div class="action-list">
                                 <div class="action-item heart">
-                                    <img
-                                        src="./assets/images/icons/heart-fill.svg"
-                                        alt=""
-                                    />
-                                    <img
-                                        src="./assets/images/icons/heart-color.svg"
-                                        alt=""
-                                    />
+                                    <div class="icon">
+                                        <img
+                                            src="./assets/images/icons/heart-fill.svg"
+                                            alt=""
+                                        />
+                                        <img
+                                            src="./assets/images/icons/heart-color.svg"
+                                            alt=""
+                                        />
+                                    </div>
                                     <span>Сохранить</span>
                                 </div>
                                 <div class="action-item">
-                                    <img
-                                        src="./assets/images/icons/chart-fill.svg"
-                                        alt=""
-                                    />
+                                    <div class="icon">
+                                        <img
+                                            src="./assets/images/icons/chart-fill.svg"
+                                            alt=""
+                                        />
+                                    </div>
                                     <span>Сравнить</span>
                                 </div>
                                 <div class="action-item">
-                                    <img
-                                        src="./assets/images/icons/share-fill.svg"
-                                        alt=""
-                                    />
+                                    <div class="icon">
+                                        <img
+                                            src="./assets/images/icons/share-fill.svg"
+                                            alt=""
+                                        />
+                                    </div>
                                     <span>Поделиться</span>
                                 </div>
                             </div>
@@ -805,93 +835,118 @@
             <section class="articles container">
                 <div class="head">
                     <h2 class="heading lv2">Статьи</h2>
-                    <div class="articles-cta">
+                    <a href="#1" class="articles-cta">
                         Читать все
                         <img src="./assets/images/icons/arrow-right.svg" alt="" />
-                    </div>
+                    </a>
                 </div>
                 <div class="row">
                     <div class="column">
                         <div class="card">
-                            <picture>
-                                <source
-                                    srcset="
-                                        ./assets/images/articles/articles-1@1x.png 1x,
-                                        ./assets/images/articles/articles-1@2x.png 2x
-                                    "
-                                />
-                                <img
-                                    src="./assets/images/articles/articles-1@1x.png"
-                                    srcset="./assets/images/articles/articles-1@2x.png 2x"
-                                    alt=""
-                                />
-                            </picture>
-                            <source />
-                            <p class="date">21 сентября 2021</p>
-                            <h4 class="title">Обручальные кольца: тренды 2021</h4>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <picture>
-                                <source
-                                    srcset="
-                                        ./assets/images/articles/articles-2@1x.png 1x,
-                                        ./assets/images/articles/articles-2@2x.png 2x
-                                    "
-                                />
-                                <img
-                                    src="./assets/images/articles/articles-2@1x.png"
-                                    srcset="./assets/images/articles/articles-2@2x.png 2x"
-                                    alt=""
-                                />
-                            </picture>
-                            <source />
-                            <p class="date">25 сентября 2021</p>
-                            <h4 class="title">Главные ювелирные тренды года</h4>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <picture>
-                                <source
-                                    srcset="
-                                        ./assets/images/articles/articles-3@1x.png 1x,
-                                        ./assets/images/articles/articles-3@2x.png 2x
-                                    "
-                                />
-                                <img
-                                    src="./assets/images/articles/articles-3@1x.png"
-                                    srcset="./assets/images/articles/articles-3@2x.png 2x"
-                                    alt=""
-                                />
-                            </picture>
+                            <a href="#1">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./assets/images/articles/articles-1@1x.png 1x,
+                                            ./assets/images/articles/articles-1@2x.png 2x
+                                        "
+                                    />
+                                    <img
+                                        src="./assets/images/articles/articles-1@1x.png"
+                                        srcset="
+                                            ./assets/images/articles/articles-1@2x.png 2x
+                                        "
+                                        alt=""
+                                    />
+                                </picture>
+                            </a>
                             <source />
                             <p class="date">21 сентября 2021</p>
                             <h4 class="title">
-                                Жемчуг: 7 малоизвестных фактов о культовом украшении
+                                <a href="#1">Обручальные кольца: тренды 2021</a>
                             </h4>
                         </div>
                     </div>
                     <div class="column">
                         <div class="card">
-                            <picture>
-                                <source
-                                    srcset="
-                                        ./assets/images/articles/articles-4@1x.png 1x,
-                                        ./assets/images/articles/articles-4@2x.png 2x
-                                    "
-                                />
-                                <img
-                                    src="./assets/images/articles/articles-4@1x.png"
-                                    srcset="./assets/images/articles/articles-4@2x.png 2x"
-                                    alt=""
-                                />
-                            </picture>
+                            <a href="#1">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./assets/images/articles/articles-2@1x.png 1x,
+                                            ./assets/images/articles/articles-2@2x.png 2x
+                                        "
+                                    />
+                                    <img
+                                        src="./assets/images/articles/articles-2@1x.png"
+                                        srcset="
+                                            ./assets/images/articles/articles-2@2x.png 2x
+                                        "
+                                        alt=""
+                                    />
+                                </picture>
+                            </a>
+                            <source />
+                            <p class="date">25 сентября 2021</p>
+                            <h4 class="title">
+                                <a href="#1">Главные ювелирные тренды года</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <a href="#1">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./assets/images/articles/articles-3@1x.png 1x,
+                                            ./assets/images/articles/articles-3@2x.png 2x
+                                        "
+                                    />
+                                    <img
+                                        src="./assets/images/articles/articles-3@1x.png"
+                                        srcset="
+                                            ./assets/images/articles/articles-3@2x.png 2x
+                                        "
+                                        alt=""
+                                    />
+                                </picture>
+                            </a>
                             <source />
                             <p class="date">21 сентября 2021</p>
                             <h4 class="title">
-                                Как отличить золото от подделки: 10 практических советов
+                                <a href="#1"
+                                    >Жемчуг: 7 малоизвестных фактов о культовом украшении
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <a href="#1">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./assets/images/articles/articles-4@1x.png 1x,
+                                            ./assets/images/articles/articles-4@2x.png 2x
+                                        "
+                                    />
+                                    <img
+                                        src="./assets/images/articles/articles-4@1x.png"
+                                        srcset="
+                                            ./assets/images/articles/articles-4@2x.png 2x
+                                        "
+                                        alt=""
+                                    />
+                                </picture>
+                            </a>
+                            <source />
+                            <p class="date">21 сентября 2021</p>
+                            <h4 class="title">
+                                <a href="#1"
+                                    >Как отличить золото от подделки: 10 практических
+                                    советов
+                                </a>
                             </h4>
                         </div>
                     </div>
