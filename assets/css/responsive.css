@@ -1,0 +1,177 @@
+/* >= tablet */
+@media (min-width: 768px) {
+    .main-content {
+        max-width: calc(100% - 60px);
+    }
+
+    .heading.lv1 {
+        font-size: 4.2rem;
+    }
+
+    .heading.lv2 {
+        font-size: 3.2rem;
+    }
+
+    .heading.lv3 {
+        font-size: 2.4rem;
+    }
+
+    .header .head {
+        height: 99px;
+    }
+
+    .header .location {
+        display: block;
+    }
+
+    .header .left {
+        justify-content: space-between;
+    }
+
+    .header .menu-mobile .toggle-menu {
+        display: none;
+    }
+
+    .banner .slider .item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .banner .slider .info {
+        margin-left: 126px;
+        text-align: start;
+        padding: 40px 0;
+    }
+
+    .popular .column {
+        width: 33.33333%;
+    }
+
+    .sale .row.first .column {
+        width: 50%;
+    }
+
+    .sale .btns,
+    .product .btns {
+        display: flex;
+    }
+
+    .sale .row.second .column {
+        width: 50%;
+    }
+
+    .sale .adv .desc {
+        font-size: 2rem;
+    }
+
+    .sale .adv .percent span {
+        font-size: 2.4rem;
+    }
+
+    .sale .adv .percent .number {
+        font-size: 3.6rem;
+    }
+
+    .product .info {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .product .action-list {
+        display: flex;
+    }
+
+    .product .buy {
+        width: unset;
+    }
+
+    .product .buy .btn.primary {
+        width: 400px;
+    }
+
+    .articles .column {
+        width: 50%;
+    }
+}
+
+/* On PC */
+@media (min-width: 1024px) {
+    .main-content {
+        width: 1300px;
+    }
+
+    .heading.lv1 {
+        font-size: 5rem;
+    }
+
+    .heading.lv2 {
+        font-size: 4rem;
+    }
+
+    .heading.lv3 {
+        font-size: 3.2rem;
+    }
+
+    .header .left {
+        column-gap: 60px;
+        justify-content: start;
+    }
+
+    .header .phone {
+        display: flex;
+    }
+
+    .header .toggle-menu-mobile {
+        display: none;
+    }
+
+    .header .right {
+        display: flex;
+    }
+
+    .header .foot {
+        display: flex;
+    }
+
+    .banner {
+        margin-top: 20px;
+    }
+
+    .popular .column {
+        width: 16.66667%;
+    }
+
+    .sale .row.first .column {
+        width: 25%;
+    }
+
+    .sale .row.second .column {
+        width: 33.33333%;
+    }
+
+    .articles .column {
+        width: 25%;
+    }
+
+    .product .body {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 50px;
+    }
+
+    .product .left {
+        width: 550px;
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1240px) {
+    .header .categories {
+        column-gap: 60px;
+    }
+
+    .product .body {
+        column-gap: 100px;
+    }
+}

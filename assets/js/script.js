@@ -8,6 +8,11 @@ const dots = document.querySelectorAll(".slider .dot");
 const heartIcons = document.querySelectorAll(".icon-heart");
 const colors = document.querySelectorAll(".color .item");
 const sizes = document.querySelectorAll(".size .size-item");
+const types = document.querySelectorAll(".sale .type");
+const layout = document.querySelector(".layout");
+const toggleMenuMobile = document.querySelector(".toggle-menu-mobile");
+const closeMenuMobile = document.querySelector(".menu-mobile .close");
+const menuMobile = document.querySelector(".menu-mobile");
 
 // let isShowBlockMenu = false;
 let currentSlide = 0;
@@ -107,6 +112,13 @@ sizes.forEach((size) => {
     });
 });
 
+types.forEach((type) => {
+    type.addEventListener("click", () => {
+        document.querySelector(".sale .type.active").classList.remove("active");
+        type.classList.add("active");
+    });
+});
+
 // Countdown
 const hourEl = document.querySelector(".time .hour");
 const minuteEl = document.querySelector(".time .minute");
@@ -144,3 +156,18 @@ function zeroPad(number) {
 
     return numberString;
 }
+
+// Menu on Mobile
+function handleShowMenuMobile() {
+    menuMobile.classList.add("active");
+    layout.classList.add("active");
+}
+
+function handleCloseMenuMobile() {
+    menuMobile.classList.remove("active");
+    layout.classList.remove("active");
+}
+
+toggleMenuMobile.addEventListener("click", handleShowMenuMobile);
+layout.addEventListener("click", handleCloseMenuMobile);
+closeMenuMobile.addEventListener("click", handleCloseMenuMobile);
