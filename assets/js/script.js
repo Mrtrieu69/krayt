@@ -1,21 +1,20 @@
 const blocksMenu = document.querySelectorAll(".toggle-menu");
 const locationItems = document.querySelectorAll(".location .item");
+const heartIcons = document.querySelectorAll(".icon-heart");
+const dots = document.querySelectorAll(".slider .dot");
+const colors = document.querySelectorAll(".color .item");
+const sizes = document.querySelectorAll(".size .size-item");
+const types = document.querySelectorAll(".sale .type");
+const toggleItems = document.querySelectorAll(".toggle-list .item");
+
 const locationName = document.querySelector(".location .name");
 const btnNext = document.querySelector(".btn.next");
 const btnPrev = document.querySelector(".btn.prev");
 const slider = document.querySelector(".slider .body");
-const dots = document.querySelectorAll(".slider .dot");
-const heartIcons = document.querySelectorAll(".icon-heart");
-const colors = document.querySelectorAll(".color .item");
-const sizes = document.querySelectorAll(".size .size-item");
-const types = document.querySelectorAll(".sale .type");
 const layout = document.querySelector(".layout");
 const toggleMenuMobile = document.querySelector(".toggle-menu-mobile");
 const closeMenuMobile = document.querySelector(".menu-mobile .close");
 const menuMobile = document.querySelector(".menu-mobile");
-
-// let isShowBlockMenu = false;
-let currentSlide = 0;
 
 // Handle toggle menu for choice
 blocksMenu.forEach((blockMenu) => {
@@ -37,19 +36,21 @@ function handleToggleList(e) {
     }
 }
 
-// Location
-locationItems.forEach((item) => {
-    item.addEventListener("click", (e) => {
-        const activeItem = document.querySelector(".location .item.active");
-        if (activeItem) {
-            activeItem.classList.remove("active");
+// Select item in toggle menu (city, ring, size)
+toggleItems.forEach((item) => {
+    item.addEventListener("click", () => {
+        const toggleMenu = item.closest(".toggle-menu");
+        if (toggleMenu) {
+            toggleMenu.querySelector(".item.active").classList.remove("active");
+            item.classList.add("active");
+            toggleMenu.querySelector(".value").textContent = item.textContent;
         }
-        item.classList.add("active");
-        locationName.textContent = item.textContent;
     });
 });
 
 // Slider
+let currentSlide = 0;
+
 btnPrev.addEventListener("click", () => {
     currentSlide--;
     renderUiSlider();
@@ -157,7 +158,7 @@ function zeroPad(number) {
     return numberString;
 }
 
-// Menu on Mobile
+// Toggle menu on Mobile
 function handleShowMenuMobile() {
     menuMobile.classList.add("active");
     layout.classList.add("active");
