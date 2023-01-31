@@ -690,6 +690,7 @@ a {
     font-size: 1.3rem;
     line-height: 1;
     text-transform: uppercase;
+    transition: 0.3s ease;
 }
 
 .header .category a {
