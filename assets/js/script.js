@@ -22,7 +22,12 @@ blocksMenu.forEach((blockMenu) => {
         if (document.querySelector(".toggle-menu.active")) {
             document.querySelector(".toggle-menu.active").classList.remove("active");
         }
+
         blockMenu.classList.add("active");
+        const toggleListBlock = blockMenu.querySelector(".toggle-list-block");
+        const toggleList = blockMenu.querySelector(".toggle-list");
+
+        toggleList.style.height = `${toggleListBlock.clientHeight}px`;
     });
 });
 
@@ -31,6 +36,9 @@ window.addEventListener("click", handleToggleList);
 function handleToggleList(e) {
     if (!e.target.closest(".toggle-menu.active")) {
         if (document.querySelector(".toggle-menu.active")) {
+            document.querySelector(
+                ".toggle-menu.active .toggle-list"
+            ).style.height = `0px`;
             document.querySelector(".toggle-menu.active").classList.remove("active");
         }
     }

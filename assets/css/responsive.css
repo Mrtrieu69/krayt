@@ -214,6 +214,11 @@
         justify-content: flex-start;
     }
 
+    .product .right .info {
+        flex-direction: row;
+        align-items: center;
+    }
+
     .product .size .info div {
         left: 50%;
     }
